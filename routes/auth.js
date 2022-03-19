@@ -5,7 +5,7 @@ const crypto = require("crypto");
 const sendEmail = require("../utils/sendEmail");
 const bcrypt = require("bcrypt");
 const Joi = require("joi");
-const fetchuser = require("../middleware/fetchuser");
+
 
 router.post("/", async (req, res) => {
 	try {
