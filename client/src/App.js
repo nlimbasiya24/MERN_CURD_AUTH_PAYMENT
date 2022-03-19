@@ -26,13 +26,13 @@ function App() {
 		<>
 		<NoteState>
 		<Routes>
-			{user && <Route path="/" exact element={<Main showAlert={showAlert} />} />}
-			<Route path="/signup" exact element={<Signup/>} />
-			<Route path="/login" exact element={<Login/>} />
-			<Route path="/" element={<Navigate replace to="/login" />} />
-			<Route path="/users/:id/verify/:token" element={<EmailVerify />} />
-			<Route path="/forgot-password" element={<ForgotPassword />} />
-			<Route path="/password-reset/:id/:token" element={<PasswordReset />} />
+			{user && <Route exact path="/" element={<Main showAlert={showAlert} />} />}
+			<Route exact path="/signup"  element={<Signup/>} />
+			<Route exact path="/login"  element={<Login/>} />
+			<Route exact path="/" element={<Navigate replace to="/login" />} />
+			<Route exact path="/users/:id/verify/:token" element={<EmailVerify />} />
+			<Route exact path="/forgot-password" element={<ForgotPassword />} />
+			<Route exact path="/password-reset/:id/:token" element={<PasswordReset />} />
 		</Routes>
 		<Alert alert={alert}/>
 		
