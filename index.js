@@ -7,6 +7,7 @@ const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
 const noteRoutes = require("./routes/notes")
 const passwordResetRoutes = require("./routes/passwordReset");
+const paymentgatway = require('./routes/payment')
 
 // database connection
 connection();
@@ -21,6 +22,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/password-reset", passwordResetRoutes);
 app.use('/api/notes',noteRoutes)
+app.use('/api/gatway',paymentgatway)
 
 if(process.env.NODE_ENV == "production"){
     app.use(express.static("client/build"))
